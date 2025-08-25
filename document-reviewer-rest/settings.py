@@ -7,7 +7,7 @@ REDIS_DB = config("REDIS_DB", default=0, cast=int)
 REDIS_USERNAME = config("REDIS_USERNAME", default="default")
 REDIS_PASSWORD = config("REDIS_PASSWORD", default='Pr790xdcjtj1HWdIvygcnDvZGtBwWzxd')
 REQUEST_CHANNEL = config("REQUEST_CHANNEL", default="my_requests_channel")
-MONGO_HOST = config('MONGO_HOST', default='lmongodb+srv://swamishweta:Shweta%40123@cluster0.pg6qthn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+MONGO_HOST = config('MONGO_HOST', default='mongodb+srv://swamishweta:Shweta%40123@cluster0.pg6qthn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 MONGO_PORT = config('MONGO_PORT', default= 27017)
   
 
@@ -73,7 +73,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'mongodb',
         'CLIENT': {
-            'host': config('MONGO_URI'),
+            'host': config('MONGO_HOST'),
         }
     }
 }
